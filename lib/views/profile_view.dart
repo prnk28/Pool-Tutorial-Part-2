@@ -34,12 +34,16 @@ class _ProfileViewState extends State<ProfileView> {
               ),
               // Back Button
               Padding(
-                padding: EdgeInsets.only(top: 35, right: 20),
-                child: RawMaterialButton(
-                            onPressed: () { Navigator.pop(context);},
-                            child: Icon(Icons.arrow_back, color: Colors.white, size: 30,)
-              )
-              ),
+                  padding: EdgeInsets.only(top: 35, right: 20),
+                  child: RawMaterialButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                        size: 30,
+                      ))),
               // Box Widget
               Center(
                 child: Padding(
@@ -106,7 +110,7 @@ class _ProfileViewState extends State<ProfileView> {
                                   children: <Widget>[
                                     Icon(Icons.assignment_turned_in,
                                         size: 38, color: neutralTextColor),
-                                    Text("Hosted",
+                                    Text("Attended",
                                         style: TextStyle(
                                             color: Colors.black87,
                                             fontWeight: FontWeight.w300))
@@ -121,7 +125,7 @@ class _ProfileViewState extends State<ProfileView> {
                                   children: <Widget>[
                                     Icon(Icons.star,
                                         size: 38, color: neutralTextColor),
-                                    Text("Hosted",
+                                    Text("Favorites",
                                         style: TextStyle(
                                             color: Colors.black87,
                                             fontWeight: FontWeight.w300))
@@ -149,27 +153,111 @@ class _ProfileViewState extends State<ProfileView> {
           ),
           // Upcoming Events Title
           Padding(
-            padding: EdgeInsets.only(top: 20, right: 240),
-            child: Text("Upcoming",
-                                        style: TextStyle(
-                                          fontSize: 24,
-                                            color: neutralTextColor,
-                                            fontWeight: FontWeight.w800))
-          ),
+              padding: EdgeInsets.only(top: 20, right: 240),
+              child: Text("Upcoming",
+                  style: TextStyle(
+                      fontSize: 24,
+                      color: neutralTextColor,
+                      fontWeight: FontWeight.w800))),
           // Upcoming Events Scroll
           Container(
-      margin: EdgeInsets.symmetric(vertical: 20.0),
-      height: 200.0,
-      child: new ListView(
-      scrollDirection: Axis.horizontal,
-      children: <Widget>[
-        UpcomingCard(),
-        UpcomingCard(),
-        UpcomingCard(),
-        UpcomingCard(),
-      ],
-    )
-    ),
+              margin: EdgeInsets.symmetric(vertical: 20.0),
+              height: 200.0,
+              child: new ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  UpcomingCard(),
+                  UpcomingCard(),
+                  UpcomingCard(),
+                  UpcomingCard(),
+                ],
+              )),
+          // Upcoming Events Title
+          Padding(
+              padding: EdgeInsets.only(top: 20, right: 270),
+              child: Text("Friends",
+                  style: TextStyle(
+                      fontSize: 24,
+                      color: neutralTextColor,
+                      fontWeight: FontWeight.w800))),
+          // Upcoming Events Scroll
+          Padding(
+            padding: EdgeInsets.only(left: 10,top: 20),
+            child: Container(
+                height: 60.0,
+                child: new ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 60.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 60.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 60.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 60.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 60.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 60.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                    ),
+                  ],
+                )),
+          ),
+
           // Top Header
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

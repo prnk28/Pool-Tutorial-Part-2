@@ -21,6 +21,15 @@ class _UpcomingCardState extends State<UpcomingCard> {
     Gradients.coldLinear
   ];
 
+  var randomGrad;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    randomGrad = randomChoice(gradArray);
+  }
+
   // Get Random Gradient
   // Build Card
   @override
@@ -56,7 +65,7 @@ class _UpcomingCardState extends State<UpcomingCard> {
               ),
             ],
           ),
-          gradient: randomChoice(gradArray),
+          gradient: randomGrad,
           elevation: 15,
         ));
   }
