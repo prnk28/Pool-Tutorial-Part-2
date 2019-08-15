@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pool_app/cells/upcoming_card.dart';
 import 'package:pool_app/components/animated_background.dart';
 import 'package:pool_app/widgets/minimal_pool_cell.dart';
 
@@ -20,6 +21,7 @@ class _ProfileViewState extends State<ProfileView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           // Create Stack to hold top widget and animated container
           Stack(
@@ -32,7 +34,7 @@ class _ProfileViewState extends State<ProfileView> {
               ),
               // Back Button
               Padding(
-                padding: EdgeInsets.only(top: 35, left: 0),
+                padding: EdgeInsets.only(top: 35, right: 20),
                 child: RawMaterialButton(
                             onPressed: () { Navigator.pop(context);},
                             child: Icon(Icons.arrow_back, color: Colors.white, size: 30,)
@@ -49,14 +51,14 @@ class _ProfileViewState extends State<ProfileView> {
                       children: <Widget>[
                         // Text View
                         Padding(
-                          padding: EdgeInsets.only(left: 100, top: 75),
+                          padding: EdgeInsets.only(left: 100, top: 70),
                           child: Column(
                             children: <Widget>[
                               Text("Pradyumn Nukala",
                                   style: TextStyle(
                                       fontSize: 20,
                                       color: textColor,
-                                      fontWeight: FontWeight.w600)),
+                                      fontWeight: FontWeight.w700)),
                               Text("Ashburn, VA",
                                   style: TextStyle(
                                       color: neutralTextColor,
@@ -145,6 +147,29 @@ class _ProfileViewState extends State<ProfileView> {
               )
             ],
           ),
+          // Upcoming Events Title
+          Padding(
+            padding: EdgeInsets.only(top: 20, right: 240),
+            child: Text("Upcoming",
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                            color: neutralTextColor,
+                                            fontWeight: FontWeight.w800))
+          ),
+          // Upcoming Events Scroll
+          Container(
+      margin: EdgeInsets.symmetric(vertical: 20.0),
+      height: 200.0,
+      child: new ListView(
+      scrollDirection: Axis.horizontal,
+      children: <Widget>[
+        UpcomingCard(),
+        UpcomingCard(),
+        UpcomingCard(),
+        UpcomingCard(),
+      ],
+    )
+    ),
           // Top Header
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

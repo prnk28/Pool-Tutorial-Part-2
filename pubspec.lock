@@ -36,6 +36,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.2"
+  dart_random_choice:
+    dependency: "direct main"
+    description:
+      name: dart_random_choice
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -46,6 +53,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  gradient_widgets:
+    dependency: "direct main"
+    description:
+      name: gradient_widgets
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.0"
   matcher:
     dependency: transitive
     description:
