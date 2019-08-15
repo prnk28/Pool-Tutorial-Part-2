@@ -61,7 +61,7 @@ class PoolBar extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ProfileView()),
+                    MaterialPageRoute(builder: (context) => ProfileView(), maintainState: false),
                   );
                 },
                 child: ClipRRect(

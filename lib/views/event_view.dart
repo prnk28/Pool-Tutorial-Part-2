@@ -8,7 +8,13 @@ const Color detailTextColor = Color.fromRGBO(0, 2, 89, 1);
 const Color neutralTextColor = Color.fromRGBO(123, 133, 169, 1);
 const Color strongTextColor = Color.fromRGBO(2, 23, 87, 1);
 
-class EventView extends StatelessWidget {
+class EventView extends StatefulWidget {
+  EventView({Key key}) : super(key: key);
+
+  _EventViewState createState() => _EventViewState();
+}
+
+class _EventViewState extends State<EventView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

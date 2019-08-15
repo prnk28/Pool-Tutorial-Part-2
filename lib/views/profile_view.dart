@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pool_app/widgets/minimal_pool_cell.dart';
 
-
-
 // Colors
 const Color textColor = Color.fromRGBO(0, 79, 255, 1);
 const Color subTextColor = Color.fromRGBO(62, 134, 255, 1);
@@ -10,7 +8,13 @@ const Color detailTextColor = Color.fromRGBO(0, 2, 89, 1);
 const Color neutralTextColor = Color.fromRGBO(123, 133, 169, 1);
 const Color strongTextColor = Color.fromRGBO(2, 23, 87, 1);
 
-class ProfileView extends StatelessWidget {
+class ProfileView extends StatefulWidget {
+  ProfileView({Key key}) : super(key: key);
+
+  _ProfileViewState createState() => _ProfileViewState();
+}
+
+class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
       return Scaffold(
@@ -109,5 +113,5 @@ class ProfileView extends StatelessWidget {
         ),
       ),
     );
-    }
   }
+}

@@ -8,11 +8,14 @@ const Color subTextColor = Color.fromRGBO(62, 134, 255, 1);
 const Color detailTextColor = Color.fromRGBO(0, 2, 89, 1);
 const Color neutralTextColor = Color.fromRGBO(123, 133, 169, 1);
 
-// Build Cell
-class PoolTableCell extends StatelessWidget {
-  final bool useBottomBar;
+class PoolTableCell extends StatefulWidget {
+    final bool useBottomBar;
+  PoolTableCell({Key key,  this.useBottomBar}) : super(key: key);
 
-  const PoolTableCell({Key key, this.useBottomBar}) : super(key: key);
+  _PoolTableCellState createState() => _PoolTableCellState();
+}
+
+class _PoolTableCellState extends State<PoolTableCell> {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
