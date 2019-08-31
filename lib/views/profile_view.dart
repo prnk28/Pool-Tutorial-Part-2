@@ -180,7 +180,7 @@ class _ProfileViewState extends State<ProfileView> {
                       fontSize: 24,
                       color: neutralTextColor,
                       fontWeight: FontWeight.w800))),
-          // Upcoming Events Scroll
+          // Friends Scroll
           Padding(
             padding: EdgeInsets.only(left: 10,top: 20),
             child: Container(

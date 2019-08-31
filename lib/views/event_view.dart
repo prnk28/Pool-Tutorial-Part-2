@@ -77,11 +77,23 @@ class _EventViewState extends State<EventView> {
                                     color: Colors.white, fontSize: 18)),
                             fillColor: Colors.redAccent,
                             shape: RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(30.0))))
+                                borderRadius:
+                                    new BorderRadius.circular(30.0)))),
                   ]))),
-                  // Friends Scroll
+Padding(
+                      padding: EdgeInsets.only(left: 310, top: 490),
+                      child: RawMaterialButton(
+                        child: Image(
+                          width: 35,
+                          height: 48,
+                          image: AssetImage("assets/bookmark.png"),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+          // Friends Scroll
           Padding(
-            padding: EdgeInsets.only(left: 40,top: 750, right: 40),
+            padding: EdgeInsets.only(left: 40, top: 750, right: 40),
             child: Container(
                 height: 45.0,
                 child: new ListView(
@@ -90,68 +102,68 @@ class _EventViewState extends State<EventView> {
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 45.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                          width: 45.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/45/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 45.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                          width: 45.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/45/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 45.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                          width: 45.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/45/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 45.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                          width: 45.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/45/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 45.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                          width: 45.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/45/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 45.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                          width: 45.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/45/abott@adorable.png")))),
                     ),
                   ],
                 )),
