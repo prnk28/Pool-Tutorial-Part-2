@@ -15,50 +15,159 @@ class EventView extends StatefulWidget {
 }
 
 class _EventViewState extends State<EventView> {
+  // Crop image
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Padding(
-        padding: EdgeInsets.only(right: 110, bottom: 30),
-        child: SizedBox(
-            width: 160,
-            height: 50,
-            child: RawMaterialButton(
-              child: Text("Join", style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500)),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25)),
-              onPressed: () {},
-              fillColor: Colors.orange,
-            )),
-      ),
-      appBar: AppBar(
-        title: Text("Profile"),
-      ),
       body: Container(
-        child: Column(
-          children: <Widget>[
-            EventHeader(),
-            Row(
-              children: <Widget>[
-                MaterialButton(
-                  color: Colors.greenAccent,
-                  height: 45,
-                  minWidth: 207,
-                  child: Icon(Icons.check, color: Colors.white),
-                  onPressed: () {},
-                ),
-                MaterialButton(
-                  color: Colors.redAccent,
-                  height: 45,
-                  minWidth: 207,
-                  child: Icon(Icons.star, color: Colors.white),
-                  onPressed: () {},
-                ),
-              ],
-            ),
-            Column()
-          ],
-        ),
+        child: Stack(children: <Widget>[
+          new AspectRatio(
+              aspectRatio: 487 / 625,
+              child: new Container(
+                decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                  fit: BoxFit.fitHeight,
+                  alignment: FractionalOffset.topCenter,
+                  image: AssetImage("assets/marathon.jpg"),
+                )),
+              )),
+          Padding(
+              padding: EdgeInsets.only(top: 450),
+              child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                          topLeft: const Radius.circular(25.0),
+                          topRight: const Radius.circular(25.0))),
+                  width: 487,
+                  height: 450,
+                  child: Column(children: <Widget>[
+                    Padding(
+                        padding: EdgeInsets.only(top: 50, right: 200),
+                        child: Text("Event Title",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blueGrey,
+                                fontSize: 28))),
+                    Padding(
+                        padding: EdgeInsets.only(top: 10, right: 270),
+                        child: Text("Location",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                color: Colors.blueGrey,
+                                fontSize: 16))),
+                    Padding(
+                        padding: EdgeInsets.only(top: 10, left: 40, right: 40),
+                        child: Text(
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid est enim aliud esse versutum? Est enim effectrix multarum et magnarum voluptatum. Re mihi non aeque satisfacit, et quidem locis pluribus. Quid enim possumus hoc agere divinius? Ea possunt paria non esse.",
+                            style: TextStyle(
+                                fontSize: 14.0,
+                                height:
+                                    1.5 //You can set your custom height here
+                                ))),
+                    Padding(
+                        padding: EdgeInsets.only(top: 100),
+                        child: RawMaterialButton(
+                            padding: EdgeInsets.only(
+                                top: 10, left: 30, right: 30, bottom: 10),
+                            onPressed: () {},
+                            child: Text("Join",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18)),
+                            fillColor: Colors.redAccent,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(30.0))))
+                  ]))),
+                  // Friends Scroll
+          Padding(
+            padding: EdgeInsets.only(left: 40,top: 750, right: 40),
+            child: Container(
+                height: 45.0,
+                child: new ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 45.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 45.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 45.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 45.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 45.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Container(
+                        width: 45.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://api.adorable.io/avatars/45/abott@adorable.png")))),
+                    ),
+                  ],
+                )),
+          ),
+          Padding(
+              padding: EdgeInsets.only(top: 35, right: 15),
+              child: RawMaterialButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(
+                    Icons.arrow_back,
+                    color: Colors.white,
+                    size: 30,
+                  ))),
+        ]),
       ),
     );
   }
