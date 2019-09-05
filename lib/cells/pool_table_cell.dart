@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pool_app/views/event_view.dart';
+import 'package:pool_app/widgets/friend_bubble.dart';
 
 // Constant Variables
 const double kCellWidth = 440;
@@ -150,51 +151,7 @@ class _PoolTableCellState extends State<PoolTableCell> {
                       ),
                     ),
                     // Social Information
-                    Container(
-                      child: Row(
-                        children: <Widget>[
-                          // Friend 1
-                          Padding(
-                            padding: EdgeInsets.only(),
-                            child: ClipRRect(
-                                borderRadius: new BorderRadius.circular(18),
-                                child: Image(
-                                    image: NetworkImage(
-                                        "https://ui-avatars.com/api/?size=36"))),
-                          ),
-                          // Friend 2
-                          Padding(
-                            padding: EdgeInsets.only(left: 1),
-                            child: ClipRRect(
-                                borderRadius: new BorderRadius.circular(18),
-                                child: Image(
-                                    image: NetworkImage(
-                                        "https://ui-avatars.com/api/?size=36"))),
-                          ),
-                          // Additional Count
-                          Padding(
-                              padding: EdgeInsets.only(left: 2),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
-                                    color: Color.fromRGBO(219, 232, 255, 1)),
-                                width: 50,
-                                height: 30,
-                                child: Padding(
-                                    padding: EdgeInsets.only(left: 6, top: 6),
-                                    child: Text("+325",
-                                        style: TextStyle(
-                                            color: textColor,
-                                            fontWeight: FontWeight.w600))),
-                              )),
-                          // Supporting Text
-                          Padding(
-                              padding: EdgeInsets.only(left: 3, right: 7),
-                              child: Text("are interested",
-                                  style: TextStyle(color: neutralTextColor)))
-                        ],
-                      ),
-                    )
+                    FriendBubble()
                   ],
                 ),
               ),
