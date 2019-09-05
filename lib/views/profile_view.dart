@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pool_app/cells/upcoming_card.dart';
 import 'package:pool_app/components/animated_background.dart';
+import 'package:pool_app/components/bottom_sheet.dart';
+import 'package:pool_app/views/pool_listview.dart';
 import 'package:pool_app/widgets/minimal_pool_cell.dart';
 
 // Colors
@@ -89,7 +91,9 @@ class _ProfileViewState extends State<ProfileView> {
                         Padding(
                             padding: EdgeInsets.only(left: 20, top: 170),
                             child: RawMaterialButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                _hostedBottomSheet(context);
+                              },
                               child: Column(
                                 children: <Widget>[
                                   Icon(Icons.person,
@@ -182,7 +186,7 @@ class _ProfileViewState extends State<ProfileView> {
                       fontWeight: FontWeight.w800))),
           // Friends Scroll
           Padding(
-            padding: EdgeInsets.only(left: 10,top: 20),
+            padding: EdgeInsets.only(left: 10, top: 20),
             child: Container(
                 height: 60.0,
                 child: new ListView(
@@ -191,68 +195,68 @@ class _ProfileViewState extends State<ProfileView> {
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 60.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                          width: 60.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/60/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 60.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                          width: 60.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/60/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 60.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                          width: 60.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/60/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 60.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                          width: 60.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/60/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 60.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                          width: 60.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/60/abott@adorable.png")))),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Container(
-                        width: 60.0,
-                        decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: new DecorationImage(
-                                fit: BoxFit.fill,
-                                image: new NetworkImage(
-                                    "https://api.adorable.io/avatars/60/abott@adorable.png")))),
+                          width: 60.0,
+                          decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: new NetworkImage(
+                                      "https://api.adorable.io/avatars/60/abott@adorable.png")))),
                     ),
                   ],
                 )),
@@ -266,5 +270,13 @@ class _ProfileViewState extends State<ProfileView> {
         ],
       ),
     );
+  }
+
+  void _hostedBottomSheet(context) {
+    showModalBottomSheetCustom(
+        context: context,
+        builder: (BuildContext bc) {
+          return PoolListView();
+        });
   }
 }
