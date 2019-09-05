@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pool_app/widgets/distance_away.dart';
+import 'package:pool_app/widgets/friend_bubble.dart';
 
 // Constant Values
 const double kCellWidth = 440;
@@ -18,65 +20,87 @@ class _PoolListCellState extends State<PoolListCell> {
   Widget build(BuildContext context) {
     // Make Cell Interactive
     return RawMaterialButton(
-      child: Card(child: Container(
-        height: 300,
-        // Top Down Widget
-        child: Column(
-          children: <Widget>[
-            Row(children: <Widget>[
-              // Left Side Image
-             Padding(
-                    padding: EdgeInsets.only(top: 10),
-                    child: ClipRRect(
-                      child: Image(
-                        image: NetworkImage(
-                            "https://api.adorable.io/avatars/110/abott@adorable.png"),
-                      ),
-                      borderRadius: BorderRadius.circular(55),
-                    )),
+        child: Card(
+          child: Container(
+              height: 175,
+              // Top Down Widget
+              child: Column(children: <Widget>[
+                Row(children: <Widget>[
+                  // Left Side Image
+                  Padding(
+                      padding: EdgeInsets.only(top: 10, left: 15),
+                      child: ClipRRect(
+                        child: Image(
+                          image: NetworkImage(
+                              "https://api.adorable.io/avatars/60/abott@adorable.png"),
+                        ),
+                        borderRadius: BorderRadius.circular(20),
+                      )),
 
-              // Title/Location Text
-              Column(children: <Widget>[
-                Text("Title"),
-                 // Distance Information
+                  // Title/Location Text
+                  Column(children: <Widget>[
+                    // Cell title and Friends Bubble
+                    Row(children: <Widget>[
+                      Padding(
+                          padding:
+                              EdgeInsets.only(left: 15, right: 60, top: 10),
+                          child: Text("Title",
+                              style: TextStyle(
+                                  fontSize: 32, fontWeight: FontWeight.w700))),
+                      Padding(
+                          padding: EdgeInsets.only(left: 55, top: 10),
+                          child: FriendBubble(additionalText: false))
+                    ]),
+                    // Distance Information
                     Container(
-                      child: Row(
-                        children: <Widget>[
-                          // GPS Icon
-                          Image(
-                            width: 20,
-                            height: 20,
-                            image: AssetImage("assets/gps.png"),
-                          ),
-                          // Text Distance
-                          Padding(
-                            padding: EdgeInsets.only(left: 5),
-                            child: Text("5M ",
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: detailTextColor)),
-                          ),
-                          // Supporting Text
-                          Padding(
-                            padding: EdgeInsets.only(),
-                            child: Text("away",
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w300,
-                                    color: detailTextColor)),
-                          )
-                        ],
-                      ),
+                        child: Padding(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                // Location Text
+                                Padding(
+                                    padding: EdgeInsets.only(right: 5),
+                                    child: Text("Richmond, VA")),
+                                DistanceAway()
+                              ],
+                            ),
+                            padding: EdgeInsets.only(right: 90, top: 5))),
+                  ])
+                ]),
+
+                // Titles
+                Padding(
+                    child: Row(
+                      children: <Widget>[
+                        Padding(
+                            padding: EdgeInsets.only(), child: Text("Created",
+                            style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.w600))),
+                        Padding(
+                            padding: EdgeInsets.only(left: 40),
+                            child: Text("Host",
+                            style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.w600))),
+                      ],
+                      mainAxisAlignment: MainAxisAlignment.start,
                     ),
-                Text("Location"),
-              ])
-            ])
-          ]
-        )
-      ),
-      ),
-      onPressed: () {}
-      );
+                    padding: EdgeInsets.only(left: 20, top: 20)),
+
+                // Details
+                Padding(
+                    child: Row(
+                      children: <Widget>[
+                        Padding(
+                            padding: EdgeInsets.only(), child: Text("Jun 2, 2019")),
+                        Padding(
+                            padding: EdgeInsets.only(left: 50),
+                            child: Text("Prad")),
+                      ],
+                      mainAxisAlignment: MainAxisAlignment.start,
+                    ),
+                    padding: EdgeInsets.only(left: 20, top: 5)),
+              ])),
+        ),
+        onPressed: () {});
   }
 }

@@ -109,7 +109,9 @@ class _ProfileViewState extends State<ProfileView> {
                         Padding(
                             padding: EdgeInsets.only(left: 140, top: 170),
                             child: RawMaterialButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  _attendedBottomSheet(context);
+                                },
                                 child: Column(
                                   children: <Widget>[
                                     Icon(Icons.assignment_turned_in,
@@ -124,7 +126,9 @@ class _ProfileViewState extends State<ProfileView> {
                         Padding(
                             padding: EdgeInsets.only(left: 265, top: 170),
                             child: RawMaterialButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  _favoritesBottomSheet(context);
+                                },
                                 child: Column(
                                   children: <Widget>[
                                     Icon(Icons.star,
@@ -276,7 +280,23 @@ class _ProfileViewState extends State<ProfileView> {
     showModalBottomSheetCustom(
         context: context,
         builder: (BuildContext bc) {
-          return PoolListView();
+          return PoolListView(title: "Hosted by Prad");
+        });
+  }
+
+    void _attendedBottomSheet(context) {
+    showModalBottomSheetCustom(
+        context: context,
+        builder: (BuildContext bc) {
+          return PoolListView(title: "Attended by Prad");
+        });
+  }
+
+      void _favoritesBottomSheet(context) {
+    showModalBottomSheetCustom(
+        context: context,
+        builder: (BuildContext bc) {
+          return PoolListView(title: "Prad's Favorites");
         });
   }
 }

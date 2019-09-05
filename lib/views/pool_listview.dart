@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pool_app/cells/pool_list_cell.dart';
 
 class PoolListView extends StatefulWidget {
-  PoolListView({Key key}) : super(key: key);
+  PoolListView({Key key, this.title}) : super(key: key);
+
+  final String title;
 
   _PoolListViewState createState() => _PoolListViewState();
 }
@@ -15,26 +17,32 @@ class _PoolListViewState extends State<PoolListView> {
          // Top Box
          children: [
            Container(
-             height: 115,
-           child: Row(
+             width: MediaQuery.of(context).size.width,
+           child: Stack(
              children: <Widget>[
                // Close Button
-               RawMaterialButton(
+               Padding(child: RawMaterialButton(
                  onPressed: () {
                     Navigator.pop(context);
                  },
-                 child: Icon(Icons.close)
+                 child: Icon(Icons.close, size: 32)
                 ),
-               Padding(child:Text("Title", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
-               padding: EdgeInsets.only(left: 100))
+               padding: EdgeInsets.only(top: 34)),
+               Center(child: Padding(
+                 child:Text(widget.title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700)),
+                 padding: EdgeInsets.only(top: 44)))
              ]
            )
          ),
          SizedBox(
-           height: 700,
+           height: MediaQuery.of(context).size.height - 82,
            child: ListView(
              children: <Widget>[
-               PoolListCell()
+               PoolListCell(),
+               PoolListCell(),
+               PoolListCell(),
+               PoolListCell(),
+               PoolListCell(),
              ]
            ))
          ]

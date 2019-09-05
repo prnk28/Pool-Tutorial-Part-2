@@ -6,8 +6,8 @@ const Color detailTextColor = Color.fromRGBO(0, 2, 89, 1);
 const Color neutralTextColor = Color.fromRGBO(123, 133, 169, 1);
 
 class FriendBubble extends StatelessWidget {
-  const FriendBubble({Key key}) : super(key: key);
-
+  const FriendBubble({Key key, this.additionalText}) : super(key: key);
+  final bool additionalText;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -47,10 +47,13 @@ class FriendBubble extends StatelessWidget {
                             color: textColor, fontWeight: FontWeight.w600))),
               )),
           // Supporting Text
-          Padding(
-              padding: EdgeInsets.only(left: 3, right: 7),
-              child: Text("are interested",
-                  style: TextStyle(color: neutralTextColor)))
+          Visibility(
+            child: Padding(
+                padding: EdgeInsets.only(left: 3, right: 7),
+                child: Text("are interested",
+                    style: TextStyle(color: neutralTextColor))),
+            visible: additionalText,
+          ),
         ],
       ),
     );

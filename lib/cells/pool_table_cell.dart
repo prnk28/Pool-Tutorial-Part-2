@@ -151,7 +151,7 @@ class _PoolTableCellState extends State<PoolTableCell> {
                       ),
                     ),
                     // Social Information
-                    FriendBubble()
+                    FriendBubble(additionalText: true)
                   ],
                 ),
               ),
