@@ -3,7 +3,7 @@
   <br>
 </div>
 
-# Pool: Tutorial Part 1 Source Code
+# Pool: Tutorial Part 2 Source Code
 
 Supplementary code for Medium Article by Pradyumn Nukala.
 
@@ -19,3 +19,5 @@ Here are a couple of links relating to this project:
 
 - [A Flutter Quickstart](https://www.freecodecamp.org/news/an-introduction-to-flutter-the-basics-9fe541fd39e2/)
 - [The App UI](https://dribbble.com/shots/6652283-Events-App)
+
+
