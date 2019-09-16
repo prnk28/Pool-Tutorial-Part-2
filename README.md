@@ -9,6 +9,8 @@ Supplementary code for Medium Article by Pradyumn Nukala.
 
 - [A Deep Dive into Flutter: The 22nd Century Frontend Framework](https://medium.com/hackernoon/a-deep-dive-into-flutter-the-22nd-century-frontend-framework-b0b827440a49)
 
+- [A Deep Dive into Flutter: The 22nd Century Frontend Framework (Part 2)](https://medium.com/flutter-community/a-deep-dive-into-flutter-the-22nd-century-frontend-framework-part-2-8964c02706b9)
+
 ## Getting Started
 
 In this tutorial we are building an Event Sharing App in Flutter.
